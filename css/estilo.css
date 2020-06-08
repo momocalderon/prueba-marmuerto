@@ -1,0 +1,66 @@
+
+
+
+header{
+    background-color: red;
+    font-weight: bold;
+}
+
+a.nav-link{
+    transition: all ease .5s;
+}
+a.nav-link:hover{
+    background-color: black;
+   color: white !important;
+   transition: 1s;
+}
+a.nav-link.active{
+    background-color: black;
+   color: white !important;
+   
+}
+
+
+
+
+
+
+.naranja{
+    color: white;
+    background-color: red;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    
+}
+
+.blanco{
+    
+    background-color: white;
+    background-image: url(../imagenes/separador5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    
+}
+
+@media (min-width:768px) {
+    .navbar-expand-md .navbar-nav .nav-link{
+        padding: 30px 15px;
+       
+    }
+
+
+
+}
+
+
+@media (min-width:768px) {
+    h4{
+        font-size: 1.3rem;
+    }
+
+
+
+}
