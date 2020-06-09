@@ -139,38 +139,35 @@ src="https://www.facebook.com/tr?id=1473974972773440&ev=PageView
                 <h1 class="text-light text-center p-5 animate__animated animate__backInDown" style="font-family: 'Alatsi', sans-serif;"> COMPRAR  </h1>
                 <h2 class="text-light text-center p-1 py-1 animate__animated animate__backInDown text-justify" style="font-family: 'Playfair Display', serif;"> Recibirá su e-book  </h2>
                
-                <h4 class=" text-center p-0 animate__animated animate__backInDown" style="font-family: 'Playfair Display', serif; color:red"> $5 USD</h4>
-                <script
-                src="https://www.paypal.com/sdk/js?client-id=AQfuF39T8vpfRlg3EF3UwiVMqOX0Ko8BdPo2iHPEhOCBPab00waOeoINwIuDLn88_1R0mSwzuK6WhOVI"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
-              </script>
-            <div id="paypal-button-container"></div>
-            <script src="https://www.paypal.com/sdk/js?client-id=AQfuF39T8vpfRlg3EF3UwiVMqOX0Ko8BdPo2iHPEhOCBPab00waOeoINwIuDLn88_1R0mSwzuK6WhOVI&currency=USD" data-sdk-integration-source="button-factory"></script>
-            <script>
-              paypal.Buttons({
-                  style: {
-                      shape: 'rect',
-                      color: 'gold',
-                      layout: 'vertical',
-                      label: 'paypal',
-                      
-                  },
-                  createOrder: function(data, actions) {
-                      return actions.order.create({
-                          purchase_units: [{
-                              amount: {
-                                  value: '5'
-                              }
-                          }]
-                      });
-                  },
-                  onApprove: function(data, actions) {
-                      return actions.order.capture().then(function(details) {
-                          alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                      });
+                <h4 class=" text-center p-0 animate__animated animate__backInDown" style="font-family: 'Playfair Display', serif; color:red"> $120 MXN</h4>
+               
+           <div id="paypal-button-container"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AQfuF39T8vpfRlg3EF3UwiVMqOX0Ko8BdPo2iHPEhOCBPab00waOeoINwIuDLn88_1R0mSwzuK6WhOVI&currency=MXN" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal',
+          
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '120'
                   }
-              }).render('#paypal-button-container');
-            </script>  
-           
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container');
+</script>
                <h5 class="text-light align-middle p-2 animate__animated animate__fadeInRight animate__delay-2.3s text-justify" style="font-family: 'Playfair Display', serif;"> Lo recaudado será donado a albergues para mujeres víctimas de violencia de género.</h5>
             </div>
             <div>
